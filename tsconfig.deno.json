@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "lib": ["deno.ns", "esnext", "dom"],     
+    "strict": true,
+    "target": "esnext",
+    "module": "esnext",
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "noImplicitAny": false,
+    "noUnusedParameters": false,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": false
+  },
+  "deno": {
+    "enable": true,
+    "lint": {
+      "rules": {
+        "tags": ["recommended"]
+      }
+    },
+    "fmt": {
+      "options": {
+        "useTabs": false,
+        "lineWidth": 80,
+        "indentWidth": 2,
+        "singleQuote": true,
+        "proseWrap": "always"
+      }
+    }
+  },
+  "imports": {
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2",
+    "https://deno.land/std@0.224.0/http/server.ts": "https://deno.land/std@0.224.0/http/server.ts" 
+  },
+  "include": [
+    "supabase/functions/**/*.ts",
+    "supabase/functions/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
